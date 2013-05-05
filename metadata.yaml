@@ -1,0 +1,17 @@
+name: modx
+summary: "MODX is a powerful & flexible content management system, this charm deploys it."
+maintainer: Ross Timson <ross@rosstimson.com>
+description: |
+  Setup and install MODX in the cloud. Nginx and php-fpm will be
+  configured to scale horizontally with Nginx's reverse proxy.
+categories:
+  - applications
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+peers:
+  loadbalancer:
+    interface: reversenginx
